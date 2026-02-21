@@ -16,6 +16,11 @@ const CONFIG = {
   businessName: 'Jewelry Room TLV',
 };
 
+/* ---- Hero Image Progressive Load ---- */
+const heroImg = new Image();
+heroImg.src = 'assets/hero-photo-wide.jpg';
+heroImg.onload = () => document.querySelector('.hero').classList.add('hero-loaded');
+
 /* ---- Navbar Scroll ---- */
 const navbar = document.getElementById('navbar');
 
