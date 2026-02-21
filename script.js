@@ -5,7 +5,7 @@
 /* ---- CONFIG ---- */
 const CONFIG = {
   // Replace with your actual WhatsApp number (with country code, no dashes or spaces)
-  whatsappNumber: '972541234567',
+  whatsappNumber: '972547938844',
 
   // Google Sheets published CSV URL for testimonials (optional)
   // 1. Create a Google Sheet with columns: name, type, text, initial
