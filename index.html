@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>סדנאות תכשיטים פרטיות – חוויה יצירתית וייחודית | Jewelry Romm</title>
+  <meta name="description" content="סדנאות תכשיטים פרטיות – עיצוב תכשיטים בהנחיה אישית. סדנאות לזוגות, ימי הולדת, צוותים וחברים.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <img src="assets/logo-transparent.png" alt="Jewelry Room TLV" class="logo-img">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#hero">בית</a></li>
+        <li><a href="#booking">סדנאות פרטיות</a></li>
+        <li><a href="#testimonials">המלצות</a></li>
+        <li><a href="#blog">בלוג</a></li>
+        <li><a href="#contact">צור קשר</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="תפריט">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">רוצים לתאם סדנא רק עבורכם?</h1>
+      <p class="hero-subtitle">
+        סדנאות אינטימיות לזוגות, פעילות לצוות מהעבודה, חגיגה של יום הולדת או סתם מפגש חברים
+      </p>
+      <p class="hero-desc">
+        בואו לסטודיו הקסום שלנו וניצור לכם סדנא שמתאימה בדיוק לכם.<br>
+        בסדנא תעצבו ותבנו תכשיט שהוא יצירה אישית, ייחודית וקסומה.
+      </p>
+      <a href="#booking" class="btn btn-primary hero-cta">הזמינו סדנא פרטית</a>
+    </div>
+  </header>
+
+  <!-- Private Workshops Section -->
+  <section class="workshops fade-in" id="booking">
+    <div class="container">
+      <div class="section-header">
+        <h2>סדנאות פרטיות מותאמות אישית</h2>
+        <p class="section-desc">
+          תקבלו את כל הידע, הכלים והחומרים הדרושים כדי ליצור תכשיט ייחודי וקסום.
+          תוך כדי עבודה עם מגוון רחב של חומרים – כסף, זהב, אבנים וחרוזים – תחברו בין הגוף והנפש
+          ותגלו את כוחה המרגיע של היצירה וההפתעה של היצירתיות הטמונה בכל אחד ואחת,
+          שאותה גם לוקחים הביתה.
+        </p>
+      </div>
+
+      <div class="booking-card">
+        <div class="booking-header">
+          <h3>סדנא פרטית</h3>
+          <p>בחרו תאריך ושעה לסדנא פרטית מותאמת אישית.</p>
+          <div class="availability-badges">
+            <span class="badge badge-available">פנוי</span>
+            <span class="badge badge-full">לא נותרו מקומות</span>
+          </div>
+        </div>
+
+        <div class="booking-body">
+          <div class="booking-calendar">
+            <div class="calendar-nav">
+              <button class="calendar-nav-btn" id="prevMonth" aria-label="חודש קודם">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+              <h4 class="calendar-month" id="calendarMonth"></h4>
+              <button class="calendar-nav-btn" id="nextMonth" aria-label="חודש הבא">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+            </div>
+            <div class="calendar-grid">
+              <div class="calendar-day-header">א׳</div>
+              <div class="calendar-day-header">ב׳</div>
+              <div class="calendar-day-header">ג׳</div>
+              <div class="calendar-day-header">ד׳</div>
+              <div class="calendar-day-header">ה׳</div>
+              <div class="calendar-day-header">ו׳</div>
+              <div class="calendar-day-header">ש׳</div>
+              <div class="calendar-days" id="calendarDays"></div>
+            </div>
+          </div>
+
+          <div class="booking-form">
+            <div class="form-group">
+              <label for="bookingTime">שעה</label>
+              <select id="bookingTime" class="form-select">
+                <option value="">בחרו שעה</option>
+                <option value="10:00">10:00</option>
+                <option value="12:00">12:00</option>
+                <option value="14:00">14:00</option>
+                <option value="16:00">16:00</option>
+                <option value="18:00">18:00</option>
+                <option value="20:00">20:00</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="bookingDuration">זמן פעילות</label>
+              <select id="bookingDuration" class="form-select">
+                <option value="">בחרו משך</option>
+                <option value="2">2 שעות</option>
+                <option value="3">3 שעות</option>
+                <option value="4">4 שעות</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="bookingName">שם מלא</label>
+              <input type="text" id="bookingName" class="form-input" placeholder="הכניסו שם מלא">
+            </div>
+            <div class="form-group">
+              <label for="bookingPhone">טלפון</label>
+              <input type="tel" id="bookingPhone" class="form-input" placeholder="050-0000000" dir="ltr">
+            </div>
+            <button class="btn btn-whatsapp btn-full" id="bookingSubmit">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              שלחו בוואטסאפ
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials fade-in" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2>לקוחות ממליצים</h2>
+      </div>
+
+      <div class="testimonials-slider">
+        <div class="testimonials-track" id="testimonialsTrack">
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">
+              <span>מ</span>
+            </div>
+            <h4 class="testimonial-name">מיכל</h4>
+            <span class="testimonial-type">סדנת צוות</span>
+            <p class="testimonial-text">
+              "היה כיף אדיר ותענוג צרוף. מבחינתי הכל עבד מושלם! את מנחה כריזמטית, מוכשרת,
+              ורואים את האהבה הגדולה שלך לעשייה הזו עם כל מילה שיוצאת לך מהפה וכל חומר
+              שאת מחזיקה ביד :) תודה רבה!!!"
+            </p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">
+              <span>ד</span>
+            </div>
+            <h4 class="testimonial-name">דנה</h4>
+            <span class="testimonial-type">סדנא זוגית</span>
+            <p class="testimonial-text">
+              "היינו בסדנא זוגית. האווירה הייתה נעימה, קלילה ומלמדת, והיה פשוט מעולה –
+              מקצועית, סבלנית, עם חיוך ותשומת לב. הרגשנו לגמרי בנוח, גם לשאול שאלות
+              וגם פשוט ליהנות מהחוויה. ממליצה בחום!"
+            </p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">
+              <span>ר</span>
+            </div>
+            <h4 class="testimonial-name">רונן</h4>
+            <span class="testimonial-type">סדנת יום הולדת</span>
+            <p class="testimonial-text">
+              "חגגנו יום הולדת בסדנא ויצאנו עם תכשיטים מדהימים! החוויה הייתה מושלמת מתחילתה
+              ועד סופה. הצוות נהנה מאוד והתכשיטים שיצרנו הפכו למזכרת הכי יפה."
+            </p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-avatar testimonial-avatar-photo">
+              <img src="assets/testimonial-noa.jpg" alt="נועה">
+            </div>
+            <h4 class="testimonial-name">נועה</h4>
+            <span class="testimonial-type">סדנא פרטית</span>
+            <p class="testimonial-text">
+              "הגעתי לבד, בלי שום ניסיון, ויצאתי עם שרשרת שאני לא מורידה מאז.
+              האווירה כל כך חמימה ומזמינה שזה הרגיש כאילו באתי לבקר חברה ולא לסדנא.
+              כבר קבעתי עוד פעם עם חברות!"
+            </p>
+          </div>
+        </div>
+
+        <div class="testimonials-nav">
+          <button class="testimonial-dot active" data-index="0" aria-label="המלצה 1"></button>
+          <button class="testimonial-dot" data-index="1" aria-label="המלצה 2"></button>
+          <button class="testimonial-dot" data-index="2" aria-label="המלצה 3"></button>
+          <button class="testimonial-dot" data-index="3" aria-label="המלצה 4"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blog fade-in" id="blog">
+    <div class="container">
+      <div class="section-header">
+        <h2>הבלוג שלנו</h2>
+        <p class="section-desc">טיפים, השראה וסיפורים מעולם התכשיטים והיצירה</p>
+      </div>
+
+      <div class="blog-filters">
+        <button class="blog-filter active" data-category="all">הכל</button>
+        <button class="blog-filter" data-category="tips">טיפים</button>
+        <button class="blog-filter" data-category="inspiration">השראה</button>
+        <button class="blog-filter" data-category="behind">מאחורי הקלעים</button>
+        <button class="blog-filter" data-category="guide">מדריכים</button>
+      </div>
+
+      <div class="blog-grid" id="blogGrid">
+
+        <article class="blog-card" data-category="tips">
+          <div class="blog-card-image">
+            <img src="assets/blog-gift-tips.jpg" alt="בחירת תכשיט מושלם למתנה">
+            <span class="blog-card-tag">טיפים</span>
+          </div>
+          <div class="blog-card-body">
+            <time class="blog-card-date">15 בפברואר 2026</time>
+            <h3 class="blog-card-title">5 טיפים לבחירת תכשיט מושלם למתנה</h3>
+            <p class="blog-card-excerpt">
+              איך בוחרים תכשיט שבאמת ידבר ללב? הנה חמישה דברים שכדאי לשים לב אליהם לפני שאתם רוכשים מתנה...
+            </p>
+            <button class="blog-card-link" data-post="0">
+              קראו עוד
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="behind">
+          <div class="blog-card-image">
+            <img src="assets/blog-behind-scenes.jpg" alt="מאחורי הקלעים של יצירת תכשיטים">
+            <span class="blog-card-tag">מאחורי הקלעים</span>
+          </div>
+          <div class="blog-card-body">
+            <time class="blog-card-date">8 בפברואר 2026</time>
+            <h3 class="blog-card-title">איך נולד תכשיט? המסע מרעיון ליצירה</h3>
+            <p class="blog-card-excerpt">
+              בואו להציץ מאחורי הקלעים של הסטודיו שלנו ולגלות את התהליך המרתק של יצירת תכשיט מאפס...
+            </p>
+            <button class="blog-card-link" data-post="1">
+              קראו עוד
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="inspiration">
+          <div class="blog-card-image">
+            <img src="assets/blog-trends.jpg" alt="טרנדים בעולם התכשיטים">
+            <span class="blog-card-tag">השראה</span>
+          </div>
+          <div class="blog-card-body">
+            <time class="blog-card-date">1 בפברואר 2026</time>
+            <h3 class="blog-card-title">טרנדים בעולם התכשיטים ל-2026</h3>
+            <p class="blog-card-excerpt">
+              מה חם השנה? מתכות מעורבות, אבנים טבעיות ועיצובים מינימליסטיים. סקירה של הטרנדים החמים...
+            </p>
+            <button class="blog-card-link" data-post="2">
+              קראו עוד
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="guide">
+          <div class="blog-card-image">
+            <img src="assets/blog-metals-guide.jpg" alt="סוגי מתכות לתכשיטים">
+            <span class="blog-card-tag">מדריכים</span>
+          </div>
+          <div class="blog-card-body">
+            <time class="blog-card-date">25 בינואר 2026</time>
+            <h3 class="blog-card-title">מדריך למתחילים: סוגי מתכות לתכשיטים</h3>
+            <p class="blog-card-excerpt">
+              כסף סטרלינג, זהב, רוז גולד או פליז? מדריך מקיף שיעזור לכם להבין את ההבדלים ולבחור נכון...
+            </p>
+            <button class="blog-card-link" data-post="3">
+              קראו עוד
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="tips">
+          <div class="blog-card-image">
+            <img src="assets/blog-jewelry-care.jpg" alt="טיפים לשמירה על תכשיטים">
+            <span class="blog-card-tag">טיפים</span>
+          </div>
+          <div class="blog-card-body">
+            <time class="blog-card-date">18 בינואר 2026</time>
+            <h3 class="blog-card-title">איך לשמור על תכשיטים שייראו כמו חדשים</h3>
+            <p class="blog-card-excerpt">
+              טיפים פשוטים ויומיומיים לתחזוקת תכשיטים, ניקוי וחידוש ברק – כדי שהתכשיט שלכם יחזיק מעמד לשנים...
+            </p>
+            <button class="blog-card-link" data-post="4">
+              קראו עוד
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="inspiration">
+          <div class="blog-card-image">
+            <img src="assets/blog-team-workshop.jpg" alt="סדנת תכשיטים לצוות">
+            <span class="blog-card-tag">השראה</span>
+          </div>
+          <div class="blog-card-body">
+            <time class="blog-card-date">10 בינואר 2026</time>
+            <h3 class="blog-card-title">סיפור הסדנא: כשצוות עבודה הפך למשפחה</h3>
+            <p class="blog-card-excerpt">
+              סיפור מרגש על סדנת צוות שהתחילה כפעילות גיבוש והפכה לחוויה שלא נשכחת. הנה מה שקרה...
+            </p>
+            <button class="blog-card-link" data-post="5">
+              קראו עוד
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Post Modal -->
+  <div class="modal-overlay" id="blogModal">
+    <div class="modal blog-modal">
+      <button class="modal-close" id="blogModalClose" aria-label="סגור">✕</button>
+      <div class="blog-modal-header">
+        <span class="blog-modal-tag" id="blogModalTag"></span>
+        <time class="blog-modal-date" id="blogModalDate"></time>
+      </div>
+      <h2 class="blog-modal-title" id="blogModalTitle"></h2>
+      <div class="blog-modal-content" id="blogModalContent"></div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section class="contact fade-in" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h3>רוצים לשמוע עוד?</h3>
+        <p class="section-desc">שלחו לנו כאן במה אתם מתעניינים ונחזור אליכם ממש מהר.</p>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contactName">שם מלא</label>
+            <input type="text" id="contactName" class="form-input" placeholder="הכניסו שם מלא" required>
+          </div>
+          <div class="form-group">
+            <label for="contactPhone">טלפון</label>
+            <input type="tel" id="contactPhone" class="form-input" placeholder="050-0000000" dir="ltr" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contactSubject">נושא</label>
+          <select id="contactSubject" class="form-select" required>
+            <option value="">בחרו נושא</option>
+            <option value="private">סדנא פרטית</option>
+            <option value="couple">סדנא זוגית</option>
+            <option value="team">סדנת צוות</option>
+            <option value="birthday">סדנת יום הולדת</option>
+            <option value="other">אחר</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="contactMessage">מה תרצו לדעת</label>
+          <textarea id="contactMessage" class="form-input form-textarea" placeholder="ספרו לנו..." rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn btn-whatsapp btn-full">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          שלחו בוואטסאפ
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img src="assets/logo-transparent.png" alt="Jewelry Room TLV" class="logo-img">
+          </a>
+          <p class="footer-tagline">סדנאות תכשיטים ייחודיות – חוויה שנשארת</p>
+        </div>
+
+        <div class="footer-nav">
+          <h4>ניווט</h4>
+          <ul>
+            <li><a href="#hero">בית</a></li>
+            <li><a href="#booking">סדנאות פרטיות</a></li>
+            <li><a href="#testimonials">המלצות</a></li>
+            <li><a href="#blog">בלוג</a></li>
+            <li><a href="#contact">צור קשר</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>יצירת קשר</h4>
+          <ul>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:info@jewelryromm.co.il">info@jewelryromm.co.il</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <a href="tel:0541234567" dir="ltr">054-1234567</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>תל אביב, ישראל</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4>עקבו אחרינו</h4>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="WhatsApp" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Jewelry Romm. כל הזכויות שמורות.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="סגור">✕</button>
+      <div class="modal-icon">✨</div>
+      <h3>תודה רבה!</h3>
+      <p>קיבלנו את הפנייה שלכם ונחזור אליכם בהקדם.</p>
+      <button class="btn btn-primary" id="modalOk">אישור</button>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/972541234567" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
